@@ -1,0 +1,5 @@
+{"name":"vibrato","version":"1.0.0","description":"Desktop music player","main":"main.js",
+"scripts":{"start":"electron .","dist":"electron-builder --win portable"},
+"devDependencies":{"electron":"^33.0.0","electron-builder":"^25.1.8"},
+"build":{"appId":"com.vibrato.player","productName":"Vibrato","files":["main.js","preload.js","index.html","style.css","app.js"],
+"extraResources":[{"from":"bin/yt-dlp.exe","to":"yt-dlp.exe"}],"win":{"target":"portable"}}}

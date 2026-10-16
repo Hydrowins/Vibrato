@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Vibrato</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data:; media-src *; style-src 'self' 'unsafe-inline'">
+<link rel="stylesheet" href="style.css"></head><body>
+<header id="bar"><b class="logo">Vibrato</b>
+  <input id="q" placeholder="Source: YT Music. Search or paste a link, then Enter">
+  <span class="wc"><button id="cfg" title="Colours">◐</button><button data-w="min">—</button><button data-w="max">▢</button><button data-w="close">✕</button></span></header>
+<main>
+  <div>
+    <section class="card" id="now">
+      <img id="art" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+      <div class="meta"><h1 id="title">Nothing playing</h1><p id="artist">Search for a song above</p>
+        <input type="range" id="seek" min="0" max="1000" value="0">
+        <div class="t"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+        <div class="ctl"><button id="prev">⏮</button><button id="play">▶</button><button id="next">⏭</button>
+          <input type="range" id="vol" min="0" max="1" step=".01" value=".8" title="Volume"></div></div>
+    </section>
+    <section class="card" id="queue"><div class="qh"><span>Queue</span><span><button id="shuf" title="Shuffle">⇄</button><button id="rep" title="Repeat">↻</button></span></div><ul id="list"></ul></section>
+  </div>
+  <div>
+    <section class="card" id="eq"><div id="bands"></div><div class="pre" id="pre"></div></section>
+    <section class="card" id="vis"><canvas id="cv" title="Click to switch wave / bars"></canvas></section>
+  </div>
+</main>
+<div id="res" class="card" hidden></div>
+<aside id="theme" class="card" hidden></aside>
+<script src="app.js"></script></body></html>
